@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 public class StableMatching
 {
+	static String file_name = "input1.txt";
 	static File file = null;
 	static BufferedReader br = null;
 	static HashMap<Integer, String[]> hmMenChoices = null;
@@ -59,10 +60,10 @@ public class StableMatching
 	 */
 	private static void readInputFile() throws Exception
 	{
-		file = new File(System.getProperty("user.dir") + "//src//input1.txt");
+		file = new File(System.getProperty("user.dir") + "//src//" + file_name);
 		if (!file.exists())
 		{
-			file = new File("input1.txt");
+			file = new File(file_name);
 		}
 		br = new BufferedReader(new FileReader(file));
 		String st;
